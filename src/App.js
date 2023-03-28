@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import axios from 'axios';
 import StargazersTable from './components/StargazersTable';
 import StargazersForm from './components/StargazersForm';
@@ -124,7 +124,6 @@ const App = () => {
         try {
             const repoDetails = await fetchRepoDetails(repo, token);
             const totalStargazers = repoDetails.stargazers_count;
-            const totalPages = Math.ceil(totalStargazers / 100);
 
             let page = 1;
             let hasMore = true;
