@@ -26,7 +26,7 @@ This application was created with the help of GPT-4, an advanced AI language mod
 
 1. Clone the GitHub repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/github-stargazers.git
+    git clone https://github.com/jerrinot/github-stargazers.git
     ```
 1. Change into the project directory:
     ```bash
