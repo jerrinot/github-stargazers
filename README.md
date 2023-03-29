@@ -43,7 +43,7 @@ This application was created with the help of GPT-4, an advanced AI language mod
 The application should now be running on http://localhost:3000.
 
 ## Deployment
-To deploy the application, you can use platforms like Netlify or Vercel. Both offer simple and straightforward deployment processes with continuous integration from a Git repository. Please follow the instructions in the Deployment section of this README.
+To deploy the application, you can use platforms like Netlify or Vercel. Both offer simple and straightforward deployment processes with continuous integration from a Git repository.
 
 ## Acknowledgements
 This project was created with the help of GPT-4, an AI language model developed by OpenAI. GPT-4 provided valuable assistance in generating code snippets, suggesting best practices, and offering guidance throughout the development process.
