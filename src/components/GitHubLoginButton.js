@@ -5,7 +5,7 @@ const GitHubLoginButton = ({ clientId }) => {
         const scope = 'public_repo';
         const redirectUri = encodeURIComponent('https://gh-stars.info/auth/github/callback');
 
-        const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&scope=${scope}&redirect_uri=${redirectUri}`;
+        const authUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}`;
         window.location.href = authUrl;
     };
 
