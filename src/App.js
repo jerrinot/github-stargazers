@@ -191,7 +191,7 @@ const App = () => {
         <div className="App" style={appStyles.container}>
             <h1 style={appStyles.title}>GitHub Stargazers</h1>
             <GitHubLoginButton clientId={clientId} />
-            <UserInfo accessToken={accessToken} onTokenInvalid={handleTokenInvalid} />
+            <UserInfo accessToken={token} onTokenInvalid={handleTokenInvalid} />
             <StargazersForm
                 repo={repo}
                 token={token}
