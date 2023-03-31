@@ -172,6 +172,17 @@ const App = () => {
         loadStargazers(repo, token);
     };
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const accessToken = urlParams.get('access_token');
+
+    if (accessToken) {
+        // Store the access token in local storage
+        localStorage.setItem('access_token', accessToken);
+
+        // Remove the access token from the URL
+        window.history.replaceState(null, '', window.location.pathname);
+    }
+
     return (
         <div className="App" style={appStyles.container}>
             <h1 style={appStyles.title}>GitHub Stargazers</h1>
