@@ -169,29 +169,23 @@ const App = () => {
         setProgress(100);
     };
 
-
-
     const handleSubmit = (e) => {
         e.preventDefault();
         loadStargazers(repo, token);
     };
 
     const urlParams = new URLSearchParams(window.location.search);
-    const accessToken = urlParams.get('access_token');
-
+    let accessToken = urlParams.get('access_token');
     if (accessToken) {
-        // Store the access token in local storage
         localStorage.setItem('access_token', accessToken);
-
-        // Remove the access token from the URL
         window.history.replaceState(null, '', window.location.pathname);
+    } else {
+        accessToken = localStorage.getItem('access_token');
     }
 
     const handleTokenInvalid = () => {
         localStorage.removeItem('access_token');
     };
-
-
 
     return (
         <div className="App" style={appStyles.container}>
