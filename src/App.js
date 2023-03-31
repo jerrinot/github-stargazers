@@ -5,6 +5,7 @@ import StargazersForm from './components/StargazersForm';
 import ProgressBar from 'react-progressbar';
 import Papa from 'papaparse';
 import GitHubLoginButton from './components/GitHubLoginButton';
+import UserInfo from './components/UserInfo';
 
 
 const API_BASE_URL = 'https://api.github.com';
@@ -186,10 +187,17 @@ const App = () => {
         window.history.replaceState(null, '', window.location.pathname);
     }
 
+    const handleTokenInvalid = () => {
+        localStorage.removeItem('access_token');
+    };
+
+
+
     return (
         <div className="App" style={appStyles.container}>
             <h1 style={appStyles.title}>GitHub Stargazers</h1>
             <GitHubLoginButton clientId={clientId} />
+            <UserInfo accessToken={accessToken} onTokenInvalid={handleTokenInvalid} />
             <StargazersForm
                 repo={repo}
                 token={token}
