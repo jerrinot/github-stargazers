@@ -4,6 +4,7 @@ import StargazersTable from './components/StargazersTable';
 import StargazersForm from './components/StargazersForm';
 import ProgressBar from 'react-progressbar';
 import Papa from 'papaparse';
+import GitHubLoginButton from './components/GitHubLoginButton';
 
 
 const API_BASE_URL = 'https://api.github.com';
@@ -83,6 +84,7 @@ const App = () => {
     const [stargazers, setStargazers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const clientId = '1d3ccbb11fdcd66a8658';
 
     const columns = useMemo(
         () => [
@@ -173,6 +175,7 @@ const App = () => {
     return (
         <div className="App" style={appStyles.container}>
             <h1 style={appStyles.title}>GitHub Stargazers</h1>
+            <GitHubLoginButton clientId={clientId} />
             <StargazersForm
                 repo={repo}
                 token={token}

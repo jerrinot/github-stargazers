@@ -1,0 +1,7 @@
+[build]
+  functions = "functions"
+
+[[redirects]]
+  from = "/auth/github/callback"
+  to = "/.netlify/functions/github-token-exchange"
+  status = 200
