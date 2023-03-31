@@ -62,7 +62,10 @@ const fetchStargazers = async (repo, page, token) => {
         Accept: 'application/vnd.github.v3+json',
     };
 
-    if (token) {
+    const accessToken = localStorage.getItem('access_token');
+    if (accessToken) {
+        headers['Authorization'] = `token ${accessToken}`;
+    } else if (token) {
         headers['Authorization'] = `token ${token}`;
     }
 
