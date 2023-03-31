@@ -45,11 +45,7 @@ const UserInfo = ({ accessToken, onTokenInvalid }) => {
                 <p>Error: {error}</p>
             ) : userData ? (
                 <div>
-                    <h3>User Information</h3>
-                    <p>Login: {userData.login}</p>
-                    <p>Name: {userData.name || 'N/A'}</p>
-                    <p>Email: {userData.email || 'N/A'}</p>
-                    <p>Location: {userData.location || 'N/A'}</p>
+                    <p>Logged as: {userData.login}</p>
                 </div>
             ) : (
                 <p>No user data available.</p>
