@@ -179,8 +179,12 @@ const App = () => {
     if (accessToken) {
         localStorage.setItem('access_token', accessToken);
         window.history.replaceState(null, '', window.location.pathname);
+        setToken(accessToken);
     } else {
         accessToken = localStorage.getItem('access_token');
+        if (accessToken) {
+            setToken(accessToken);
+        }
     }
 
     const handleTokenInvalid = () => {
