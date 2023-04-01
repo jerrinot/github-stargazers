@@ -182,7 +182,7 @@ const App = () => {
         setToken(accessToken);
     } else {
         accessToken = localStorage.getItem('access_token');
-        if (accessToken) {
+        if (accessToken !== token) {
             setToken(accessToken);
         }
     }
