@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useMemo} from 'react';
 
 const UserInfo = ({ accessToken, onTokenInvalid }) => {
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
+    useMemo(() => {
         if (accessToken) {
             setLoading(true);
 
